@@ -1,0 +1,52 @@
+import { Text, View, TouchableOpacity } from "react-native";
+import { Link } from "expo-router";
+import styles from "@/styles/global";
+
+export default function Index() {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 20
+      }}
+    >
+      <Link href={"/prototype-one"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype 1</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href={"/prototype-two"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype 2</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href={"/prototype-three"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype 3</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href={"/prototype-four"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype 4</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href={"/prototype-five"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype 5</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href={"/prototype-six"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype 6</Text>
+        </TouchableOpacity>
+      </Link>
+      <Link href={"/prototype-seven"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype 7</Text>
+        </TouchableOpacity>
+      </Link>
+    </View>
+  );
+}

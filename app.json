@@ -3,13 +3,13 @@
     "name": "play_pixo",
     "slug": "play_pixo",
     "version": "1.0.0",
-    "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "requiredFullScreen": true
     },
     "android": {
       "adaptiveIcon": {
@@ -22,6 +22,7 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "orientation": "landscape",
     "plugins": [
       "expo-router",
       [
@@ -31,6 +32,12 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "LANDSCAPE"
         }
       ]
     ],
