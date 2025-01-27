@@ -10,10 +10,13 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 
+// Get the screen dimensions
 const { width, height } = Dimensions.get("window");
 
+// Constants
 const CIRCLE_RADIUS = 30;
 const BALL_RADIUS = 30;
+// Padding for the left side of the circles
 const LEFTPADDING = CIRCLE_RADIUS * 1.5;
 
 const circles = [
@@ -29,22 +32,28 @@ const circles = [
   { x: LEFTPADDING + (9 * width) / 11, y: height / 3 },
 ];
 
+// Props for the BallSpringTarget component
 interface BallSpringTargetProps {
   n: number;
 }
 
 const BallSpringTarget = ({ n }: BallSpringTargetProps) => {
+  // Shared value for the ball's position
   const ballPosition = useSharedValue({
     x: width / 2 + 2.5 * (n - 2.5) * CIRCLE_RADIUS,
     y: (3 * height) / 4 - BALL_RADIUS,
     ball: n,
   });
 
+  // Shared value for the context of the ball's position
   const context = useSharedValue({ x: 0, y: 0 });
+
+  // Shared value for the ball's snap position
   const ballSnap = useSharedValue(0);
 
   const [displaySnap, setDisplaySnap] = useState(0);
 
+  // Reaction to update the displaySnap state when ballSnap changes
   useAnimatedReaction(
     () => ballSnap.value,
     (snap, prevSnap) => {

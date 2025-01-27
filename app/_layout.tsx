@@ -37,6 +37,18 @@ export default function RootLayout() {
           name="prototype-ten"
           options={{ presentation: "card" }}
         />
+        <Stack.Screen
+          name="prototype-eleven"
+          options={{ presentation: "card" }}
+        />
+        <Stack.Screen
+          name="prototype-twelve"
+          options={{ presentation: "card" }}
+        />
+        <Stack.Screen
+          name="prototype-final"
+          options={{ presentation: "card" }}
+        />
       </Stack>
     </GestureHandlerRootView>
   );

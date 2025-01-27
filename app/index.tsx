@@ -39,13 +39,13 @@ export default function Index() {
               <Text style={styles.indexText}>Prototype 5</Text>
             </TouchableOpacity>
           </Link>
-        </View>
-        <View style={{ flexDirection: "column", gap: 10 }}>
           <Link href={"/prototype-six"} asChild>
             <TouchableOpacity>
               <Text style={styles.indexText}>Prototype 6</Text>
             </TouchableOpacity>
           </Link>
+        </View>
+        <View style={{ flexDirection: "column", gap: 10 }}>
           <Link href={"/prototype-seven"} asChild>
             <TouchableOpacity>
               <Text style={styles.indexText}>Prototype 7</Text>
@@ -66,8 +66,23 @@ export default function Index() {
               <Text style={styles.indexText}>Prototype 10</Text>
             </TouchableOpacity>
           </Link>
+          <Link href={"/prototype-eleven"} asChild>
+            <TouchableOpacity>
+              <Text style={styles.indexText}>Prototype 11</Text>
+            </TouchableOpacity>
+          </Link>
+          <Link href={"/prototype-twelve"} asChild>
+            <TouchableOpacity>
+              <Text style={styles.indexText}>Prototype 12</Text>
+            </TouchableOpacity>
+          </Link>
         </View>
       </View>
+      <Link href={"/prototype-final"} asChild>
+        <TouchableOpacity>
+          <Text style={styles.indexText}>Prototype Final</Text>
+        </TouchableOpacity>
+      </Link>
     </View>
   );
 }
